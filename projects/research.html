@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio-1</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyResume
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" >
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    
+  </header>
+
+  <main class="main">
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>5MW PMSM Motor Design Project</h2>
+        <p>Thermal, Structural, and Electromagnetic Co-Design Using ANSYS, SolidWorks, MotorCAD, and MATLAB</p>
+      </div>
+    
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-5 justify-content-center">
+    
+          <!-- Text Content -->
+          <div class="col-lg-12 content">
+    
+            <h3 class="fw-bold mb-3">Project Overview</h3>
+            <p>
+              The goal was to design a high-performance 5MW Permanent Magnet Synchronous Motor (PMSM) to replace an existing 3.5MW motor with strict constraints: same physical footprint, use of the existing external cooling infrastructure, and a thermal hotspot limit of 140°C on windings in steady-state. Reliability was prioritized by reducing coolant joints and designing the motor to withstand mechanical shocks during transport and operation.
+            </p>
+    
+            <h3 class="fw-bold mt-5 mb-3">System-Level Design Approach</h3>
+            <p>
+              The entire motor system was modeled and validated through iterative cycles of CAD, FEA, thermal CFD, and hand calculations. Focus areas included electromagnetic losses, component-level heat transfer, vibration response, and structural integrity under extreme loading conditions.
+            </p>
+    
+            <h4 class="text-primary mt-4">🧩 Component Breakdown</h4>
+            <ul>
+              <li><strong>Stator:</strong> Built with 35PN270 lamination steel and housed water jackets for active cooling.</li>
+              <li><strong>Rotor:</strong> Integrated permanent magnets and fan blades at ends for induced air cooling; shaft supported by hydrodynamic bearings.</li>
+              <li><strong>Shaft & End Plates:</strong> Hand-calculated for deflection, stress, and fatigue using MATLAB and validated through FEA.</li>
+              <li><strong>Cold Plate:</strong> Custom machined aluminum cold plate with high-efficiency water flow channels; 25 LPM coolant flow.</li>
+              <li><strong>Insulation System:</strong> Multi-layer slot liners (NKN), porabond, polyamide tapes, and thermal interface gel to minimize thermal resistance.</li>
+            </ul>
+    
+            <h4 class="text-primary mt-4">🔧 CAD Design – SolidWorks</h4>
+            <p>
+              A complete parametric model was created in SolidWorks including all major assemblies and detailed parts. Constraints were maintained for foot-mounting, shaft alignment, and integration with the unchangeable external cooler.
+            </p>
+    
+            <h4 class="text-primary mt-4">🧊 Thermal Management – ANSYS Fluent & Thermal</h4>
+            <ul>
+              <li>CFD was used to simulate internal air motion and rotor-induced air churning, improving convective heat transfer at the end windings.</li>
+              <li>Water jacket geometry optimized for turbulent flow and even temperature distribution.</li>
+              <li>30° stator segment used for simulation (cyclic symmetry); real material properties modeled including copper anisotropy.</li>
+              <li>Critical boundary conditions: 40°C inlet temperature, 25 LPM cold plate, 150 LPM external flow through heat exchanger.</li>
+            </ul>
+    
+            <h4 class="text-primary mt-4">🛠️ Structural & Modal FEA – ANSYS Mechanical</h4>
+            <ul>
+              <li><strong>Static Structural:</strong> Validated stress/strain in shaft, mounts, and frame. Peak stresses remained under yield limits for all loading cases.</li>
+              <li><strong>Shock Load Simulation:</strong> 30g acceleration applied in multiple directions. Design confirmed safe for handling and transportation.</li>
+              <li><strong>Modal Analysis:</strong> Ensured natural frequencies were far from operational excitation frequencies to prevent resonance.</li>
+              <li><strong>Harmonic Response:</strong> Verified displacement and stress under vibrational loads.</li>
+            </ul>
+    
+            <h4 class="text-primary mt-4">📉 Electromagnetic Loss Estimation – MotorCAD</h4>
+            <ul>
+              <li>Copper losses: <strong>100 kW</strong></li>
+              <li>Stator core losses: <strong>49.4 kW</strong></li>
+              <li>Rotor body losses: <strong>2.47 kW</strong></li>
+              <li>Magnet losses: <strong>1.59 kW</strong></li>
+              <li>These were fed into thermal simulations as distributed volumetric heat sources.</li>
+            </ul>
+    
+            <h4 class="text-primary mt-4">📐 Validation & Calculations – MATLAB</h4>
+            <ul>
+              <li>Rotor dynamics and critical speed calculations</li>
+              <li>Bearing sizing and lubricant flow estimation</li>
+              <li>Analytical shaft deflection and torsion calculations</li>
+              <li>Custom scripts to post-process FEA and CFD outputs for report automation</li>
+            </ul>
+    
+            <h3 class="fw-bold mt-5 mb-3">Results</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <ul>
+                  <li><strong>Max winding temperature:</strong> 140°C (within safe limits)</li>
+                  <li><strong>Avg winding temp:</strong> 130°C</li>
+                  <li><strong>Core temp:</strong> Avg 92°C</li>
+                  <li><strong>Housing temp:</strong> 51°C</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul>
+                  <li><strong>Internal air temp:</strong> 76.6°C</li>
+                  <li><strong>Magnet temp:</strong> Max 132.3°C</li>
+                  <li><strong>Shock safety:</strong> Passed 30g load simulation</li>
+                  <li><strong>Structural margins:</strong> Yield factor of safety > 1.8</li>
+                </ul>
+              </div>
+            </div>
+    
+            <h3 class="fw-bold mt-5 mb-3">Key Achievements</h3>
+            <ul>
+              <li>Increased power by 43% while maintaining original motor footprint</li>
+              <li>Maintained thermal stability using optimized cold plate and internal rotor airflow</li>
+              <li>Reduced coolant joint complexity, enhancing reliability</li>
+              <li>Validated full structural integrity across operational and shock environments</li>
+            </ul>
+          </div>
+    
+          <!-- Image Gallery -->
+          <div class="col-lg-12 mt-5">
+            <h3 class="fw-bold mb-4">Project Visuals</h3>
+            <div class="row g-4">
+          
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                  <img src="../assets/img/5MWdp.png" class="card-img-top" alt="SolidWorks Model">
+                  <div class="card-body p-2">
+                    <p class="card-text text-center small">Motor prototype Image </p>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                  <img src="../assets/img/SImplifed_rotor_for_analysis.png" class="card-img-top" alt="SImplifed rotor with bldes for analysis.png">
+                  <div class="card-body p-2">
+                    <p class="card-text text-center small">Simplifed rotor model with magnets and blades for analysis</p>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                  <img src="../assets/img/Isometric view of quater part of the motor assembly.png" class="card-img-top" alt="Rotor Cooling">
+                  <div class="card-body p-2">
+                    <p class="card-text text-center small">Isometric view of quater part of the motor assembly</p>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                  <img src="../assets/img/30 degree stator segment model with coils assembled.png" class="card-img-top" alt="Shock Simulation">
+                  <div class="card-body p-2">
+                    <p class="card-text text-center small">30 degree stator segment model with coils and cold plate assembled</p>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                  <img src="../assets/img/Real coil image.jpg" class="card-img-top" alt="Cold Plate Flow">
+                  <div class="card-body p-2">
+                    <p class="card-text text-center small">Real coil image.jpg</p>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                  <img src="../assets/img/Simplied sator segment with cold plate and flow path.png" class="card-img-top" alt="Magnet Temperatures">
+                  <div class="card-body p-2">
+                    <p class="card-text text-center small">Simplied sator segment with cold plate and flow path.png</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                  <img src="../assets/img/coolant flow through cold plate.jpg" class="card-img-top" alt="Magnet Temperatures">
+                  <div class="card-body p-2">
+                    <p class="card-text text-center small">coolant flow through cold plate.jpg</p>
+                  </div>
+          
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                  <img src="../assets/img/Air velocity contour in a segement while rotor is rotated.jpg" class="card-img-top" alt="Magnet Temperatures">
+                  <div class="card-body p-2">
+                    <p class="card-text text-center small">Air velocity contour in a segement while rotor is rotated</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                  <img src="../assets/img/temperature contour in motor assembly segment.jpg" class="card-img-top" alt="Magnet Temperatures">
+                  <div class="card-body p-2">
+                    <p class="card-text text-center small">Temperature contour in motor assembly segment</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                  <img src="../assets/img/Coil temperature profile at steady state.jpg" class="card-img-top" alt="Magnet Temperatures">
+                  <div class="card-body p-2">
+                    <p class="card-text text-center small">Coil temperature profile at steady state</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                  <img src="../assets/img/End plate with heat exchanger.png" class="card-img-top" alt="Magnet Temperatures">
+                  <div class="card-body p-2">
+                    <p class="card-text text-center small">End plate with heat exchangere</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                  <img src="../assets/img/prototype motor rotor.jpg" class="card-img-top" alt="Magnet Temperatures">
+                  <div class="card-body p-2">
+                    <p class="card-text text-center small">prototype motor rotor</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                  <img src="../assets/img/Heat Flow Diagram.png" class="card-img-top" alt="Magnet Temperatures">
+                  <div class="card-body p-2">
+                    <p class="card-text text-center small">Heat Flow Diagram</p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                  <video class="card-img-top" controls>
+                    <source src="../assets/img/5MWdemo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <div class="card-body p-2">
+                    <p class="card-text text-center small">Air velocity distribution after the motor starts runinng</p>
+                  </div>
+                </div>
+              </div>
+              
+
+          
+    </section>
+    
+      
+    
+
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h4 class="sitename">Sai Dinesh Gelam
+      <!-- <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p> -->
+      <div class="social-links d-flex justify-content-center">
+        <a href="mailto:gsdinesh1998@gmail.com"><i class="bi bi-envelope"></i></a>
+        
+        <!-- <a href="https://github.com/AbhinavB7"><i class="bi bi-github"></i></a> -->
+        <!-- <a href="../"><i class="bi bi-instagram"></i></a>
+        <a href="../"><i class="bi bi-skype"></i></a> -->
+        <a href="https://www.linkedin.com/in/saidineshgelam/"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <!-- <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Alex Smith</strong> <span>All Rights Reserved</span>
+        </div> -->
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="../#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
