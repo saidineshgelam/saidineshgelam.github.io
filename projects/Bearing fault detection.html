@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio-1</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyResume
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" >
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    
+  </header>
+
+  <main class="main">
+    <!-- About Section -->
+    <section id="rotor-bearing-ml" class="about section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Fault Diagnosis of Rotor-Bearing System Using Machine Learning</h2>
+        <p>Vibration Signal Processing | PCA | SOM | Logistic Regression | Fault Classification</p>
+      </div>
+    
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-5 justify-content-center">
+    
+          <div class="col-lg-12 content">
+    
+            <h3 class="fw-bold mb-3">Project Overview</h3>
+            <p>
+              A rotor-bearing testbed was constructed to evaluate the health condition of a rotating shaft system under different unbalance scenarios. The system was tested at a rotational speed of 20 Hz, with additional screws mounted on the disk to induce controlled unbalance defects. Vibration signals were collected using an accelerometer placed on the bearing block. The data acquisition rate was 2560 Hz, under both balanced and unbalanced operating conditions.
+            </p>
+    
+            <h3 class="fw-bold mt-5 mb-3">Data Acquisition & Experimental Setup</h3>
+            <ul>
+              <li>Rotor operated at a fixed speed of 20 Hz</li>
+              <li>Screws used to introduce unbalanced conditions at varying levels</li>
+              <li>Accelerometer mounted on bearing block to capture vibrations</li>
+              <li>Signal collected at 2560 Hz under healthy and faulty (unbalanced) conditions</li>
+            </ul>
+    
+            <h3 class="fw-bold mt-5 mb-3">Feature Extraction & Signal Analysis</h3>
+            <ul>
+              <li>Principal Component Analysis (PCA) applied to identify significant vibration features</li>
+              <li>1X and 2X harmonic components identified as the most relevant indicators of rotor imbalance</li>
+              <li>RMS and standard deviation were found to contribute minimally to classification</li>
+            </ul>
+    
+            <h3 class="fw-bold mt-5 mb-3">Machine Learning Models</h3>
+    
+            <h5 class="text-primary mt-3">Self-Organizing Maps (SOM)</h5>
+            <ul>
+              <li>SOM model trained to classify rotor health into three categories: healthy, unbalance 1, and unbalance 2</li>
+              <li>Successfully clustered test samples based on harmonic feature inputs</li>
+              <li>Prediction confidence values ranged from 1.0 (healthy) to 0.6 (unbalance 2), showing lower reliability under severe faults</li>
+            </ul>
+    
+            <h5 class="text-primary mt-3">Logistic Regression</h5>
+            <ul>
+              <li>Trained on the same feature set as the SOM model</li>
+              <li>Effectively predicted labels for all classes with distinct output values:
+                <ul>
+                  <li>~0.75 for healthy</li>
+                  <li>~0.375 for unbalance 1</li>
+                  <li>~0.0 for unbalance 2</li>
+                </ul>
+              </li>
+              <li>Offered clearer boundary separation between fault conditions</li>
+            </ul>
+    
+            <h3 class="fw-bold mt-5 mb-3">Conclusion</h3>
+            <ul>
+              <li>Both SOM and Logistic Regression models provided effective classification of rotor health conditions</li>
+              <li>PCA helped simplify the feature space, highlighting the importance of harmonic frequencies over time-domain metrics</li>
+              <li>The study demonstrated the potential of machine learning in early detection of unbalance faults in rotating machinery</li>
+            </ul>
+          </div>
+    
+          <!-- Figures -->
+          <div class="col-lg-12 mt-5">
+            <h3 class="fw-bold mb-4">Visuals</h3>
+            <div class="row g-4">
+    
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                  <img src="../assets/img/testbed_setup.jpg" class="card-img-top" alt="Testbed">
+                  <div class="card-body p-2">
+                    <p class="card-text text-center small">Rotor-Bearing Testbed Used for Fault Injection</p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                  <img src="../assets/img/logistic_vs_som.jpg" class="card-img-top" alt="Model Comparison">
+                  <div class="card-body p-2">
+                    <p class="card-text text-center small">Prediction Output: Logistic Regression vs SOM</p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                  <img src="../assets/img/pca_features.jpg" class="card-img-top" alt="PCA Result">
+                  <div class="card-body p-2">
+                    <p class="card-text text-center small">PCA Feature Selection Result – Dominance of 1X/2X Harmonics</p>
+                  </div>
+                </div>
+              </div>
+    
+            </div>
+          </div>
+    
+          <!-- Optional Video Section -->
+          <div class="col-lg-12 mt-5">
+            <h3 class="fw-bold mb-3">Video Overview</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card h-100 shadow-sm border-0">
+                  <video class="card-img-top" controls>
+                    <source src="../assets/videos/rotor_fault_demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <div class="card-body p-2">
+                    <p class="card-text text-center small">Rotor Unbalance Fault Detection Demo</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    
+    
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h4 class="sitename">Sai Dinesh Gelam
+      <!-- <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p> -->
+      <div class="social-links d-flex justify-content-center">
+        <a href="mailto:gsdinesh1998@gmail.com"><i class="bi bi-envelope"></i></a>
+        
+        <!-- <a href="https://github.com/AbhinavB7"><i class="bi bi-github"></i></a> -->
+        <!-- <a href="../"><i class="bi bi-instagram"></i></a>
+        <a href="../"><i class="bi bi-skype"></i></a> -->
+        <a href="https://www.linkedin.com/in/saidineshgelam/"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <!-- <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Alex Smith</strong> <span>All Rights Reserved</span>
+        </div> -->
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="../#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

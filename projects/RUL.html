@@ -46,143 +46,134 @@
 
   <main class="main">
     <!-- About Section -->
-    <section id="btms-project" class="about section">
+    <section id="rul-prediction" class="about section">
       <div class="container section-title" data-aos="fade-up">
-        <h2>Battery Thermal Management System (BTMS) for Electric Vehicles</h2>
-        <p>Complete HVAC Design | CATIA V6 | ANSYS Fluent & Structural | Control Strategy Integration</p>
+        <h2>Remaining Useful Life Prediction of Aircraft Engines Using Machine Learning</h2>
+        <p>Industrial AI | RNN, LSTM, SVR, CNN, XGBoost | Python, MATLAB</p>
       </div>
     
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-5 justify-content-center">
     
-          <!-- Text Content -->
           <div class="col-lg-12 content">
     
             <h3 class="fw-bold mb-3">Project Overview</h3>
             <p>
-              This project focused on the complete design, simulation, and validation of a <strong>Battery Thermal Management System (BTMS)</strong> for Electric Vehicles (EVs). The primary goal was to develop an <strong>8 kW cooling system</strong> from scratch, capable of maintaining battery packs within an optimal thermal envelope to enhance safety, efficiency, and lifespan.
+              This research focused on developing machine learning models to predict the Remaining Useful Life (RUL) of aircraft engines. The study used run-to-failure data from 260 simulated engines operating across six flight regimes, aiming to predict how many cycles remain before an engine reaches end of life. Accurate RUL prediction plays a vital role in predictive maintenance, cost reduction, and operational safety in aviation systems.
             </p>
+    
+            <h3 class="fw-bold mt-5 mb-3">Data & Preparation</h3>
+            <ul>
+              <li>Dataset included 260 historical engine units for training and 100 units for testing</li>
+              <li>Each unit experienced six operating regimes characterized by altitude, speed, and power settings</li>
+              <li>Sensor selection performed to identify signals strongly correlated with degradation (e.g., pressure ratio, temperature)</li>
+              <li>Data preprocessing included regime-based normalization, batching, and labeling with computed RUL values</li>
+            </ul>
+    
+            <h3 class="fw-bold mt-5 mb-3">Machine Learning Models Used</h3>
+    
+            <h5 class="text-primary mt-3">Recurrent Neural Network (RNN)</h5>
+            <ul>
+              <li>Implemented in MATLAB using the Levenberg–Marquardt method</li>
+              <li>Trained on raw, unprepared data as a reference baseline</li>
+              <li>Performed well with final RMSE of 34.22</li>
+            </ul>
+    
+            <h5 class="text-primary mt-3">Long Short-Term Memory (LSTM)</h5>
+            <ul>
+              <li>Developed in Python with tuned memory cells and gate configurations</li>
+              <li>Outperformed all other models with lowest RMSE of 28.23 (mean prediction)</li>
+              <li>Showed robust performance even in noisy early-life data</li>
+            </ul>
+    
+            <h5 class="text-primary mt-3">Support Vector Regression (SVR)</h5>
+            <ul>
+              <li>Grid search and 10-fold cross-validation used for optimal hyperparameter tuning</li>
+              <li>Offered competitive performance with RMSE of 28.66</li>
+            </ul>
+    
+            <h5 class="text-primary mt-3">1-D Convolutional Neural Network (1D-CNN)</h5>
+            <ul>
+              <li>Model designed to extract temporal features from engine sensor sequences</li>
+              <li>Achieved RMSE of 32.16 with good predictions near end-of-life regions</li>
+            </ul>
+    
+            <h5 class="text-primary mt-3">Extreme Gradient Boosting (XGBoost)</h5>
+            <ul>
+              <li>Implemented with tree-based depth control and regularization</li>
+              <li>Achieved average performance with highest RMSE of 37.58 (final prediction)</li>
+            </ul>
+    
+            <h3 class="fw-bold mt-5 mb-3">Results & Model Comparison</h3>
             <p>
-              The scope extended to cover <strong>three BTMS variants—5 kW, 8 kW, and 12 kW</strong>—each offered in <strong>R407c and R134a refrigerant versions</strong>. These systems were designed with a strong focus on performance, long-term durability, and precise HVAC control logic for real-world vehicle conditions.
+              All models were evaluated using both their final prediction and an average of their last five predictions. The LSTM model achieved the best performance overall. SVR and 1D-CNN models showed strong predictions for low RUL regions, which is critical for timely maintenance actions. The RNN model, despite using raw data, delivered reasonable accuracy, serving as a benchmark.
             </p>
     
-            <h3 class="fw-bold mt-5 mb-3">Key Responsibilities & Technical Contributions</h3>
+            <table class="table table-bordered table-striped mt-4">
+              <thead class="table-light">
+                <tr>
+                  <th>Model</th>
+                  <th>RMSE (Mean Prediction)</th>
+                  <th>RMSE (Final Prediction)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>LSTM</td><td>28.23</td><td>28.89</td></tr>
+                <tr><td>SVR</td><td>28.66</td><td>33.59</td></tr>
+                <tr><td>XGBoost</td><td>32.00</td><td>37.58</td></tr>
+                <tr><td>1D-CNN</td><td>32.16</td><td>33.57</td></tr>
+                <tr><td>RNN</td><td>33.66</td><td>34.22</td></tr>
+              </tbody>
+            </table>
     
-            <h5 class="text-primary mt-4 mb-2">🧊 HVAC System Design</h5>
+            <h3 class="fw-bold mt-5 mb-3">Conclusions & Future Work</h3>
             <ul>
-              <li>Performed thermal load analysis and calculated component sizing for various vehicle configurations</li>
-              <li>Designed BTMS for 8 kW heat extraction at 10 °C coolant inlet using both R407c and R134a refrigerants</li>
-              <li>Defined operational envelope across ambient conditions and battery state-of-charge profiles</li>
+              <li>LSTM and SVR showed highest reliability in predicting end-of-life conditions</li>
+              <li>Data preprocessing significantly improved model performance, particularly for SVR and CNN</li>
+              <li>Future work includes sensitivity analysis on data preparation methods and more rigorous grid search across all models</li>
+              <li>Exploring ensemble methods and early-cycle noise reduction may further reduce RMSE</li>
             </ul>
     
-            <h5 class="text-primary mt-4 mb-2">🔩 Component Selection & System Integration</h5>
-            <ul>
-              <li>Selected and integrated: scroll compressor, plate-type heat exchanger, expansion valve, condenser, fans, and coolant circulation pump</li>
-              <li>Developed custom coolant tank, piping layout, shock-absorbing mounts, and insulated enclosure to maximize performance and serviceability</li>
-            </ul>
-    
-            <h5 class="text-primary mt-4 mb-2">📐 Mechanical Design – CATIA V6</h5>
-            <ul>
-              <li>Created detailed 3D models for all BTMS modules including subassemblies and part constraints</li>
-              <li>Optimized for compact packaging within EV chassis constraints</li>
-              <li>Ensured ease of maintenance and thermal isolation within enclosure design</li>
-            </ul>
-    
-            <h5 class="text-primary mt-4 mb-2">🌡️ CFD & Structural Validation – ANSYS</h5>
-            <ul>
-              <li><strong>ANSYS Fluent:</strong> Simulated refrigerant flow, air cooling patterns, and fan efficiency to refine airflow paths and minimize hotspots</li>
-              <li><strong>ANSYS Mechanical:</strong> Conducted vibration, structural stress, and modal analyses for durability over long-term field operation</li>
-            </ul>
-    
-            <h5 class="text-primary mt-4 mb-2">⚙️ Control Strategy & Electronics Coordination</h5>
-            <ul>
-              <li>Worked closely with the Control Electronics team to define and implement HVAC logic</li>
-              <li>Implemented dynamic compressor control based on real-time ambient and BMS (Battery Management System) feedback</li>
-              <li>Achieved a stable average Coefficient of Performance (COP) of 3.0</strong> under all operating conditions</li>
-            </ul>
-    
-            <h3 class="fw-bold mt-5 mb-3">Results & Field Testing</h3>
-            <ul>
-              <li>Completed over 100,000 miles of road testing on EV trucks and buses across varied climates</li>
-              <li>No major failures reported, validating reliability and thermal safety</li>
-              <li>BTMS units successfully commercialized and integrated into production vehicles</li>
-            </ul>
+            <h5 class="mt-4">Team Members: Brian O’Malley, Ashwin Sudarshan, Sai Dinesh Gelam</h5>
           </div>
     
-          <!-- Image Gallery -->
+          <!-- Visuals -->
           <div class="col-lg-12 mt-5">
-            <h3 class="fw-bold mb-4">Project Visuals</h3>
+            <h3 class="fw-bold mb-4">Visuals & Model Workflows</h3>
             <div class="row g-4">
     
               <div class="col-md-4">
                 <div class="card h-100 shadow-sm border-0">
-                  <img src="../assets/img/btms_model.png" class="card-img-top" alt="CATIA Model">
+                  <img src="../assets/img/Sensor selection.png" class="card-img-top" alt="LSTM Workflow">
                   <div class="card-body p-2">
-                    <p class="card-text text-center small">Full BTMS Modeled in CATIA</p>
+                    <p class="card-text text-center small">Sensor selection</p>
                   </div>
                 </div>
               </div>
     
               <div class="col-md-4">
                 <div class="card h-100 shadow-sm border-0">
-                  <img src="../assets/img/btms_components.png" class="card-img-top" alt="HVAC Components">
+                  <img src="../assets/img/Data preparation work flow.png" class="card-img-top" alt="RNN vs Actual">
                   <div class="card-body p-2">
-                    <p class="card-text text-center small">Integrated HVAC Stack: Compressor, HX, Fans, Condenser</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-4">
-                <div class="card h-100 shadow-sm border-0">
-                  <img src="../assets/img/btms_component2.png" class="card-img-top" alt="HVAC Components">
-                  <div class="card-body p-2">
-                    <p class="card-text text-center small">Side view</p>
+                    <p class="card-text text-center small">Data preparation work flow.png</p>
                   </div>
                 </div>
               </div>
     
               <div class="col-md-4">
                 <div class="card h-100 shadow-sm border-0">
-                  <img src="../assets/img/8KW BTMS real picture.jpg" class="card-img-top" alt="CFD">
+                  <img src="../assets/img/CNN work Flow.png" class="card-img-top" alt="XGBoost Error Profile">
                   <div class="card-body p-2">
-                    <p class="card-text text-center small">8KW BTMS real picture</p>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="col-md-4">
-                <div class="card h-100 shadow-sm border-0">
-                  <img src="../assets/img/working picture of BTMS.jpg" class="card-img-top" alt="Control Strategy">
-                  <div class="card-body p-2">
-                    <p class="card-text text-center small">working picture of BTMS</p>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="col-md-4">
-                <div class="card h-100 shadow-sm border-0">
-                  <img src="../assets/img/refrigerant and coolant circuits.png" class="card-img-top" alt="Field Test">
-                  <div class="card-body p-2">
-                    <p class="card-text text-center small">refrigerant and coolant circuits</p>
+                    <p class="card-text text-center small">CNN work Flow</p>
                   </div>
                 </div>
               </div>
 
               <div class="col-md-4">
                 <div class="card h-100 shadow-sm border-0">
-                  <img src="../assets/img/Control strategy in Discharge.png" class="card-img-top" alt="Field Test">
+                  <img src="../assets/img/Prediction and Ground truth.png" class="card-img-top" alt="XGBoost Error Profile">
                   <div class="card-body p-2">
-                    <p class="card-text text-center small">Control strategy in Discharge</p>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="col-md-4">
-                <div class="card h-100 shadow-sm border-0">
-                  <img src="../assets/img/Control strategy in charging.png" class="card-img-top" alt="Field Test">
-                  <div class="card-body p-2">
-                    <p class="card-text text-center small">Control strategy in charging</p>
+                    <p class="card-text text-center small">Prediction and Ground truth</p>
                   </div>
                 </div>
               </div>
@@ -190,27 +181,34 @@
             </div>
           </div>
     
-          <!-- Video Demo
-          <div class="col-lg-12 mt-5">
-            <h3 class="fw-bold mb-3">Video Demo</h3>
+          <!-- Optional Video Section -->
+          <!-- <div class="col-lg-12 mt-5">
+            <h3 class="fw-bold mb-3">Demo Video</h3>
             <div class="row">
               <div class="col-md-6">
                 <div class="card h-100 shadow-sm border-0">
                   <video class="card-img-top" controls>
-                    <source src="../assets/videos/btms_demo.mp4" type="video/mp4">
+                    <source src="../assets/videos/rul_prediction_demo.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
                   <div class="card-body p-2">
-                    <p class="card-text text-center small">Thermal and Field Performance Highlights</p>
+                    <p class="card-text text-center small">Aircraft Engine RUL Estimation Workflow</p>
                   </div>
                 </div>
               </div>
             </div>
-          </div> -->
+          </div>
     
         </div>
       </div>
-    </section>
+    </section> -->
+    
+    
+    
+    
+    
+    
+    
     
     
     
